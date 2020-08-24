@@ -1,88 +1,49 @@
 pipeline {
-	agent any
-	stages {
-
-        stage('Lint HTML') {
-			steps {
-				sh 'tidy -q -e *.html'
-			}
-		}
-
-        stage('Build Docker Image') {
-			steps {
-				withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]){
-					sh '''
-						docker build -t $DOCKER_USERNAME/capstone .
-					'''
-				}
-			}
-		}
-
-		stage('Push Image To Dockerhub') {
-			steps {
-				withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]){
-					sh '''
-						docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-						docker push $DOCKER_USERNAME/capstone
-					'''
-				}
-			}
-		}
-
-        stage('Create cluster') {
-            steps {
-                withAWS(credentials: 'aws-static', region: 'us-west-2') {
-                    sh "eksctl create cluster --name capstonecluster --version 1.16 --region us-west-2 --without-nodegroup"
-                }
-            }
+     agent any
+     stages {
+         stage('Build') {
+              steps {
+                  sh 'echo Building...'
+              }
+         }
+         stage('Lint HTML') {
+              steps {
+                  sh 'tidy -q -e *.html'
+              }
+         }
+         stage('Build Docker Image') {
+              steps {
+                  sh 'docker build -t capstone-project-cloud-devops .'
+              }
+         }
+         stage('Push Docker Image') {
+              steps {
+                  withDockerRegistry([url: "", credentialsId: "dockerhub"]) {
+                      sh "docker tag Cloud-DevOps-Nanodegree-Udacity-CapstoneProject FairozaAmira/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject"
+                      sh 'docker push FairozaAmira/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject'
+                  }
+              }
+         }
+         stage('Deploying') {
+              steps{
+                  echo 'Deploying to AWS...'
+                  withAWS(credentials: 'aws', region: 'us-west-2') {
+                      sh "aws eks --region us-west-2 update-kubeconfig --name prod"
+                      sh "kubectl config use-context arn:aws:eks:us-west-2:386907932725:cluster/prod"
+                      sh "kubectl set image deployments/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject Cloud-DevOps-Nanodegree-Udacity-CapstoneProject=FairozaAmira/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject:latest"
+                      sh "kubectl apply -f deployment/deployment.yml"
+                      sh "kubectl get nodes"
+                      sh "kubectl get deployment"
+                      sh "kubectl get pod -o wide"
+                      sh "kubectl get service/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject"
+                  }
+              }
         }
-
-		stage('Create node group') {
-            steps {
-                withAWS(credentials: 'aws-static', region: 'us-west-2') {
-                    sh "eksctl create nodegroup --cluster capstonecluster --version auto --name standard-workers --node-type t3.micro --node-ami auto --nodes 3 --nodes-min 1 --nodes-max 4 --region us-west-2 --ssh-public-key udacity-oregon-course"
-                }
-            }
+        stage("Cleaning up") {
+              steps{
+                    echo 'Cleaning up...'
+                    sh "docker system prune"
+              }
         }
-
-		stage('Configuring') {
-			steps {
-				withAWS(credentials: 'aws-static', region: 'us-west-2') {
-					sh '''
-						aws eks --region us-west-2 update-kubeconfig --name capstonecluster
-						chmod +x aws/replaceARNrole.sh
-						./aws/replaceARNrole.sh
-						cat aws/aws-auth-cm.yaml
-					'''
-				}
-			}
-		}
-
-		stage('Deploying') {
-			steps {
-				withAWS(credentials: 'aws-static', region: 'us-west-2') {
-					sh '''
-						kubectl get nodes
-						kubectl apply -f aws/aws-auth-cm.yaml
-						kubectl apply -f aws/capstone-app-deployment.yml
-						kubectl apply -f aws/load-balancer.yml
-						kubectl get pods
-						kubectl get svc
-					'''
-				}
-			}
-		}
-
-		stage('Getting nodes,pods,services') {
-			steps {
-				withAWS(credentials: 'aws-static', region: 'us-west-2') {
-					sh '''
-						kubectl get nodes
-						kubectl get pods
-						kubectl get svc
-					'''
-				}
-			}
-		}
-	}
+     }
 }
