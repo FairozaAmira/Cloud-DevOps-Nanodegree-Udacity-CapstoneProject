@@ -11,7 +11,7 @@ dockerpath="ubuntu/capstone-app"
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker login --username ubuntu
+#docker login --username ubuntu
 docker image tag capstone-app $dockerpath
 
 # Step 3:
