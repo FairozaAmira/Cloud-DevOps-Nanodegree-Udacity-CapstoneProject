@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d369df9-30d6-40e8-ad69-2516ff1ad12e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/run-kubernetes.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/run-kubernetes.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/upload-docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/upload-docker.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

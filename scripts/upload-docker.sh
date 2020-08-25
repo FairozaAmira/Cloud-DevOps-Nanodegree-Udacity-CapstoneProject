@@ -5,7 +5,7 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath="FairozaAmira/capstone-app"
+dockerpath="ubuntu/capstone-app"
 
 
 # Step 2:  
