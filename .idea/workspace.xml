@@ -20,19 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d369df9-30d6-40e8-ad69-2516ff1ad12e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CloudFormation/amazon-eks-nodegroup-params.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CloudFormation/amazon-eks-nodegroup.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CloudFormation/eks-cluster-params.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CloudFormation/eks-cluster.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CloudFormation/network-params.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CloudFormation/network.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deployment/deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deployment/load-balancer.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudFormation/aws-auth-cm.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudFormation/aws-auth-cm.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudFormation/deploy.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudFormation/load-balancer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudFormation/replaceARNrole.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/upload-docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/upload-docker.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +43,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/deployment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/deployment" />
       <recent name="$PROJECT_DIR$/CloudFormation" />
     </key>
@@ -84,5 +76,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
