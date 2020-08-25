@@ -28,9 +28,8 @@ pipeline {
               steps{
                   echo 'Deploying to AWS...'
                   withAWS(credentials: 'aws', region: 'us-west-2') {
-                      sh "eksctl create cluster --name eks-cluster --version 1.16 --nodegroup-name standard-workers --node-type t2.medium --nodes 3 --nodes-min 1 --nodes-max 4 --node-ami auto --region us-west-2"
-                      sh "aws eks --region us-west-2 update-kubeconfig --name eks-cluster"
-                      sh "kubectl config use-context arn:aws:eks:us-west-2:386907932725:cluster/eks-cluster"
+                      sh "aws eks --region us-west-2 update-kubeconfig --name eks-clus"
+                      sh "kubectl config use-context arn:aws:eks:us-west-2:386907932725:cluster/eks-clus"
                       sh "kubectl set image deployments/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject Cloud-DevOps-Nanodegree-Udacity-CapstoneProject=FairozaAmira/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject:latest"
                       sh "kubectl apply -f CloudFormation/aws-auth-cm.yaml"
                       sh "kubectl apply -f deployment/deployment.yml"
