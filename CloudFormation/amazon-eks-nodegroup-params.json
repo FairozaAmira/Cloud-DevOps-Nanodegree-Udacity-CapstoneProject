@@ -13,7 +13,7 @@
     },
     {
       "ParameterKey": "ImageID",
-      "ParameterValue": "ami-003634241a8fcdec0"
+      "ParameterValue": "ami-02c078caa7d113cac"
     },
     {
       "ParameterKey": "MinSize",

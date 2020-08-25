@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3d369df9-30d6-40e8-ad69-2516ff1ad12e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudFormation/amazon-eks-nodegroup-params.json" beforeDir="false" afterPath="$PROJECT_DIR$/CloudFormation/amazon-eks-nodegroup-params.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudFormation/aws-auth-cm.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudFormation/aws-auth-cm.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
