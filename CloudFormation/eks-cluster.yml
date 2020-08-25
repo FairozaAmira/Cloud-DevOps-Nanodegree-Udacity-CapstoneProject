@@ -48,7 +48,7 @@ Resources:
 Outputs:
   EksId:
     Description: The EKS id.
-    Value: !Ref eks-prod
+    Value: !Ref eks-cluster
     Export:
       Name: !Sub ${EnvironmentName}-EKS
 
