@@ -5,13 +5,13 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath="ubuntu/capstone-app"
+dockerpath="fairoza/capstone-app"
 
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-#docker login --username ubuntu
+docker login --username fairoza
 docker image tag capstone-app $dockerpath
 
 # Step 3:
