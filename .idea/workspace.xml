@@ -20,9 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d369df9-30d6-40e8-ad69-2516ff1ad12e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/blue-green-service.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudformation/create_eks_cluster.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudformation/eksctl-eks-clus-nodegroup-standard-workers.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudformation/eksctl-eks-clus.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_kubernetes.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudFormation/amazon-eks-nodegroup-params.json" beforeDir="false" afterPath="$PROJECT_DIR$/CloudFormation/amazon-eks-nodegroup-params.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudFormation/aws-auth-cm.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudFormation/aws-auth-cm.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudFormation/amazon-eks-nodegroup-params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudFormation/amazon-eks-nodegroup.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudFormation/aws-auth-cm.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudFormation/eks-cluster-params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudFormation/eks-cluster.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudFormation/network-params.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudFormation/network.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deployment/deployment.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deployment/load-balancer.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/create-kubeconfig.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/create-stack.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/delete-stack.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/run-docker.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/run-kubernetes.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/update-stack.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/upload-docker.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +65,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/scripts" />
   </component>
   <component name="RecentsManager">
