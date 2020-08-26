@@ -36,7 +36,7 @@ pipeline {
                       sh "kubectl config use-context arn:aws:eks:us-west-2:386907932725:cluster/udacity-eks"
                       //sh "kubectl set image deployment/capstone capstone=fairoza/capstone:latest"
                       //sh "kubectl apply -f cloudformation/aws-auth-cm.yaml"
-                      sh "kubectl apply -f deployment/deployment.yml"
+                      sh "kubectl apply -f deployment/deployment.yaml"
                       sh "kubectl get nodes"
                       sh "kubectl get deployment"
                       sh "kubectl get pod -o wide"
