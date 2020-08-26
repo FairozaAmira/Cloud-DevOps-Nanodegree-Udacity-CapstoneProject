@@ -11,10 +11,10 @@ node {
       echo "Branch: ${env.BRANCH_NAME}"
       sh 'docker -v'
     }
-    stage("Linting") {
-      echo 'Linting...'
-      sh '/usr/bin/hlint blue/Dockerfile'
-      sh '/usr/bin/hlint green/Dockerfile'
+    stage('Lint HTML') {
+        steps {
+             sh 'tidy -q -e *.html'
+              }
     }
     stage('Building image blue') {
 	    echo 'Building Docker image blue...'
