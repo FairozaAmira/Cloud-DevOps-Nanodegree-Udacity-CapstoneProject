@@ -19,7 +19,7 @@ pipeline {
          stage('Push Docker Image') {
               steps {
                   withDockerRegistry([url: "", credentialsId: "dockerhub"]) {
-                      sh "docker tag Cloud-DevOps-Nanodegree-Udacity-CapstoneProject FairozaAmira/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject"
+                      sh "docker tag capstone-app FairozaAmira/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject"
                       sh 'docker push FairozaAmira/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject'
                   }
               }
