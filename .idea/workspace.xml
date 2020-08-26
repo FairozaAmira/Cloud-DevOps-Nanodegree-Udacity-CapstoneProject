@@ -22,11 +22,6 @@
     <list default="true" id="3d369df9-30d6-40e8-ad69-2516ff1ad12e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment/load-balancer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deployment/load-balancer.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/run-docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/run-docker.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/run-kubernetes.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/run-kubernetes.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upload-docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/upload-docker.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
