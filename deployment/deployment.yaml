@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       labels:
-        app: -capstone
+        app: capstone
     spec:
       containers:
         - image: fairoza/capstone
