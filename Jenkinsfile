@@ -38,9 +38,9 @@ node {
       echo 'Deploying to AWS EKS...'
       dir ('./') {
         withAWS(credentials: 'aws', region: 'us-west-2') {
-            sh "aws eks --region us-east-2 update-kubeconfig --name eks-clus"
-            sh "kubectl apply -f blue/blue-controller.json"
-            sh "kubectl apply -f green/green-controller.json"
+            sh "aws eks --region us-west-2 update-kubeconfig --name eks-clus"
+            sh "kubectl apply -f blue/blue.json"
+            sh "kubectl apply -f green/green.json"
             sh "kubectl apply -f ./blue-green-service.json"
             sh "kubectl get nodes"
             sh "kubectl get pods"
