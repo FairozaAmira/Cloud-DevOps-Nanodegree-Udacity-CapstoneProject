@@ -34,8 +34,8 @@ pipeline {
                   withAWS(credentials: 'demo-ecr-credentials', region: 'us-west-2') {
                       sh "aws eks --region us-west-2 update-kubeconfig --name udacity-eks"
                       sh "kubectl config use-context arn:aws:eks:us-west-2:386907932725:cluster/udacity-eks"
-                      sh "kubectl set image deployment/capstone capstone=fairoza/capstone:latest"
-                      sh "kubectl apply -f cloudformation/aws-auth-cm.yaml"
+                      //sh "kubectl set image deployment/capstone capstone=fairoza/capstone:latest"
+                      //sh "kubectl apply -f cloudformation/aws-auth-cm.yaml"
                       sh "kubectl apply -f deployment/deployment.yml"
                       sh "kubectl get nodes"
                       sh "kubectl get deployment"
