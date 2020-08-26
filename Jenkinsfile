@@ -1,4 +1,8 @@
 pipeline {
+    environment {
+        registry = "fairoza/capstone"
+        registryCredential = 'dockerhub'
+    }
      agent any
      stages {
          stage('Build') {
@@ -13,7 +17,7 @@ pipeline {
          }
          stage('Build Docker Image') {
               steps {
-                  sh 'docker build -t capstone-app .'
+                  sh 'docker build -t capstone .'
               }
          }
          stage('Push Docker Image') {
