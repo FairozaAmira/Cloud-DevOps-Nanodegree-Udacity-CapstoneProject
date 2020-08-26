@@ -31,7 +31,7 @@ pipeline {
          stage('Deploying') {
               steps{
                   echo 'Deploying to AWS...'
-                  withAWS(credentials: 'aws', region: 'us-west-2') {
+                  withAWS(credentials: 'demo-ecr-credentials', region: 'us-west-2') {
                       sh "aws eks --region us-west-2 update-kubeconfig --name udacity-eks"
                       sh "kubectl config use-context arn:aws:eks:us-west-2:386907932725:cluster/udacity-eks"
                       sh "kubectl set image deployments/capstone fairoza/capstone:latest"
