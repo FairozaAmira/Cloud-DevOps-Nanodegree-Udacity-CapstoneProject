@@ -42,6 +42,11 @@ To get a local copy up and running follow these simple example steps.
 2. Create an EC2 instance with Amazon Linux and [install Jenkins](https://www.edureka.co/community/53769/install-jenkins-on-an-ec2-instance).
 3. Then, install necessary plugins such as AWS SDK, Blue Ocean, Pipeline and GitHub clients.
 4. Create a [Docker](hub.docker.com) account.
+5. EKS can be created manually by using the command below.
+```
+eksctl create cluster --name <cluster-name> --version 1.16 --nodegroup-name standard-workers --node-type t2.medium --nodes 3 --nodes-min 1 --nodes-max 4 --node-ami auto --region us-west-2
+```
+6. Setup the credentials in Jenkins for AWS credentials and dockerhub credentials
 
 ### Installation
 
