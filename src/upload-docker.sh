@@ -5,14 +5,14 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath="fairoza/capstone-app"
+dockerpath="fairoza/capstone"
 
 
 # Step 2:
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker login --username fairoza
-docker image tag capstone-app $dockerpath
+docker image tag capstone $dockerpath
 
 # Step 3:
 # Push image to a docker repository
