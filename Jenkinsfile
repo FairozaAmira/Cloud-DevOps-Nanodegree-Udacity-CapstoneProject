@@ -19,8 +19,8 @@ pipeline {
          stage('Push Docker Image') {
               steps {
                   withDockerRegistry([url: "", credentialsId: "dockerhub"]) {
-                      sh "docker tag capstone-app FairozaAmira/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject"
-                      sh 'docker push FairozaAmira/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject'
+                      sh "docker tag cloud-devops-udacity-capstone FairozaAmira/cloud-devops-udacity-capstone"
+                      sh 'docker push FairozaAmira/cloud-devops-udacity-capstone'
                   }
               }
          }
@@ -30,13 +30,13 @@ pipeline {
                   withAWS(credentials: 'aws', region: 'us-west-2') {
                       sh "aws eks --region us-west-2 update-kubeconfig --name udacity-eks"
                       sh "kubectl config use-context arn:aws:eks:us-west-2:386907932725:cluster/udacity-eks"
-                      sh "kubectl set image deployments/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject Cloud-DevOps-Nanodegree-Udacity-CapstoneProject=FairozaAmira/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject:latest"
+                      sh "kubectl set image deployments/cloud-devops-udacity-capstone cloud-devops-udacity-capstone=FairozaAmira/cloud-devops-udacity-capstone:latest"
                       sh "kubectl apply -f CloudFormation/aws-auth-cm.yaml"
                       sh "kubectl apply -f deployment/deployment.yml"
                       sh "kubectl get nodes"
                       sh "kubectl get deployment"
                       sh "kubectl get pod -o wide"
-                      sh "kubectl get service/Cloud-DevOps-Nanodegree-Udacity-CapstoneProject"
+                      sh "kubectl get service/cloud-devops-udacity-capstone"
                   }
               }
         }

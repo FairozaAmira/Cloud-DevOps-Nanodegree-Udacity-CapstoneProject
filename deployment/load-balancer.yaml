@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: Cloud-DevOps-Nanodegree-Udacity-CapstoneProject
+  name: cloud-devops-udacity-capstone
   labels:
-    app: Cloud-DevOps-Nanodegree-Udacity-CapstoneProject
+    app: cloud-devops-udacity-capstone
 spec:
   type: LoadBalancer
   selector:
-    app: Cloud-DevOps-Nanodegree-Udacity-CapstoneProject
+    app: cloud-devops-udacity-capstone
   ports:
     - port: 80
       targetPort: 80
