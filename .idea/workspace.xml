@@ -20,46 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d369df9-30d6-40e8-ad69-2516ff1ad12e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudformation/amazon-eks-nodegroup-params.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudformation/amazon-eks-nodegroup.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudformation/aws-auth-cm.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudformation/eks-cluster-params.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudformation/eks-cluster.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudformation/network-params.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudformation/network.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deployment/deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deployment/load-balancer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/create-kubeconfig.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/create-stack.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/delete-stack.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/run-docker.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/run-kubernetes.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/update-stack.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/upload-docker.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blue-green-service.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blue/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blue/blue.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blue/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blue/run-docker.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blue/run-kubernetes.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blue/text.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blue/upload-docker.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudformation/create_eks_cluster.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudformation/eksctl-eks-clus-nodegroup-standard-workers.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudformation/eksctl-eks-clus.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/green/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/green/green.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/green/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/green/run-docker.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/green/run-kubernetes.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/green/text.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/green/upload-docker.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_kubernetes.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudformation/amazon-eks-nodegroup-params.json" beforeDir="false" afterPath="$PROJECT_DIR$/cloudformation/amazon-eks-nodegroup-params.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
