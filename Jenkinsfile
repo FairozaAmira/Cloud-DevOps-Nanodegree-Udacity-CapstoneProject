@@ -19,8 +19,8 @@ pipeline {
          stage('Push Docker Image') {
               steps {
                   withDockerRegistry([url: "", credentialsId: "dockerhub"]) {
-                      sh "docker tag cloud-devops-udacity-capstone FairozaAmira/cloud-devops-udacity-capstone"
-                      sh 'docker push FairozaAmira/cloud-devops-udacity-capstone'
+                      sh "docker tag cloud-devops-udacity-capstone fairozaamira/cloud-devops-udacity-capstone"
+                      sh 'docker push fairozaamira/cloud-devops-udacity-capstone'
                   }
               }
          }
@@ -30,7 +30,7 @@ pipeline {
                   withAWS(credentials: 'aws', region: 'us-west-2') {
                       sh "aws eks --region us-west-2 update-kubeconfig --name udacity-eks"
                       sh "kubectl config use-context arn:aws:eks:us-west-2:386907932725:cluster/udacity-eks"
-                      sh "kubectl set image deployments/cloud-devops-udacity-capstone cloud-devops-udacity-capstone=FairozaAmira/cloud-devops-udacity-capstone:latest"
+                      sh "kubectl set image deployments/cloud-devops-udacity-capstone cloud-devops-udacity-capstone=fairozaamira/cloud-devops-udacity-capstone:latest"
                       sh "kubectl apply -f CloudFormation/aws-auth-cm.yaml"
                       sh "kubectl apply -f deployment/deployment.yml"
                       sh "kubectl get nodes"
